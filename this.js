@@ -35,8 +35,28 @@ const hobbit = {
 
 console.log(hobbit.cook());
 
+// Petar's Example
+const jungle = {
+    greeting: 'Hello',
+    sayHello: function(name) {
+      console.log(`${this.greeting} my name is ${name}`);
+      console.log(this);
+    }
+};
 
+jungle.sayHello('Tarzan');
 
+// Jayne's Example
+const tree = {
+    type: "Oak",
+    nest: "Yes",
+    animal: "squirrel",
+    info: function() {
+      return `There is a ${this.animal} in this ${this.type} tree`;
+    }
+}
+
+console.log(tree.info());
 
 
 
