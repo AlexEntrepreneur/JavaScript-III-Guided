@@ -83,7 +83,6 @@ console.log(introduce.apply(person, jillSkills));
 // .bind() Stores this keyword for function to be called later
 console.log(introduce.bind(person, "Singing", "Carpentry", "Bakery")());
 
-
 // Jayne's Example
 // const jedi = {
 //     name: "Luke",
