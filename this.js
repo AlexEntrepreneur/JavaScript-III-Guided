@@ -69,14 +69,27 @@ const jedi = {
     name: "Luke"
 }
 
-function introduce() {
-    return `Hello! My name is ${this.name}`;
+function introduce(skill1, skill2, skill3) {
+    return `Hello! My name is ${this.name} and my skills are ${skill1}, ${skill2} and ${skill3}`;
 }
 
 // .call() requires arguments to be passed individually
-console.log(introduce.call(person));
+console.log(introduce.call(person, "Singing", "Carpentry", "Bakery"));
 
 // .apply() Accepts sing array to pass arguments
-console.log(introduce.apply(jedi));
+// console.log(introduce.apply(jedi));
 
 // .bind() Stores this keyword for function to be called later
+
+
+// Jayne's Example
+// const jedi = {
+//     name: "Luke",
+//     location: "Tattoine"
+// }
+  
+// function introduce() {
+//     return `Hello! My name is ${this.name} I am from ${this.location}`;
+// } 
+
+// console.log(introduce.call(jedi));
