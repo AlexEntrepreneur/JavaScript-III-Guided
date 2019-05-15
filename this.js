@@ -9,8 +9,19 @@ function globalThis() {
 
 globalThis();
 
+// Jayne's Example
+function global() {
+    console.log(this);
+}
+  
+global();
 
+// Petar's Example
+function log(){
+   console.log(this);
+}
 
+log();
 
 //====== Implicit Binding ======//
 
