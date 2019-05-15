@@ -33,6 +33,10 @@ const hobbit = {
     }
 }
 
+console.log(hobbit.cook());
+
+
+
 
 
 
