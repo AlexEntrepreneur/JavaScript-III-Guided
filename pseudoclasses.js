@@ -28,10 +28,6 @@ const fred = new Parent({
     phrase: "Yabba dabba do!"
 });
 
-// const wilma = new Parent({
-
-// });
-
 // Shola's Example
 const velma = new Parent({
     age: 25,
@@ -49,13 +45,29 @@ const batman = new Parent ({
     phrase: "I AM BATMAN"
 });
 
-console.log(velma);
-
-
-
 
 //====== Pseudoclassical Inheritance ======//
 // Step 1. Create Constructor
-// Step 2. Add Explicit Binding
+function Child(childAttributes) {
+    // Step 2. Add Explicit Binding
+    Parent.call(this, childAttributes);
+    this.toy = childAttributes.toy;
+}
+
 // Step 3. Connect Child to Parent
+Child.prototype = Object.create(Parent.prototype);
+
 // Step 4. Attach Child Methods!
+Child.prototype.play = function() {
+    return `${this.name} plays with her ${this.toy}`;
+}
+
+const pebbles = new Child({
+    age: 2,
+    name: "Pebbles",
+    location: "Bedrock",
+    phrase: "Ma Ma",
+    toy: "rock doll"
+});
+
+console.log(pebbles);
