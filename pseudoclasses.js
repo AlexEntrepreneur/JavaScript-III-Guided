@@ -70,4 +70,36 @@ const pebbles = new Child({
     toy: "rock doll"
 });
 
-console.log(pebbles);
+// Jayne + Petar's Examples
+function GrandChild(grandchildAttributes) {
+    Child.call(this, grandchildAttributes);
+    this.lollypop = grandchildAttributes.lollypop;
+    this.hairColor = grandchildAttributes.hairColor;
+}
+
+GrandChild.prototype = Object.create(Child.prototype);
+
+GrandChild.prototype.rolling = function() {
+    return `${this.name} plays with her ${this.toy}`;
+}
+
+GrandChild.prototype.hair = function () {
+    return `${this.name} has ${this.hairColor}`;
+}
+
+const bob = new GrandChild({
+    age: "3 months",
+    name: "Bob",
+    location: "Bedrock",
+    phrase: "giggle",
+    toy: "pacifier",
+    lollypop: true,
+    hairColor: "Brown"
+});
+
+console.log(bob.speak())
+console.log(fred.speak())
+console.log(pebbles.play())
+console.log(velma.speak())
+
+  
