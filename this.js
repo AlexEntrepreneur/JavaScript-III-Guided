@@ -76,10 +76,12 @@ function introduce(skill1, skill2, skill3) {
 // .call() requires arguments to be passed individually
 console.log(introduce.call(person, "Singing", "Carpentry", "Bakery"));
 
-// .apply() Accepts sing array to pass arguments
-// console.log(introduce.apply(jedi));
+// .apply() Accepts array to pass arguments
+const jillSkills = ["Singing", "Carpentry", "Bakery"];
+console.log(introduce.apply(person, jillSkills));
 
 // .bind() Stores this keyword for function to be called later
+console.log(introduce.bind(person, "Singing", "Carpentry", "Bakery")());
 
 
 // Jayne's Example
@@ -93,3 +95,7 @@ console.log(introduce.call(person, "Singing", "Carpentry", "Bakery"));
 // } 
 
 // console.log(introduce.call(jedi));
+// Jayne's Example
+const jillSkills2 = ["Making tables", "Winning at karaoke", "Baking brownies"];
+
+console.log(introduce.apply(person, jillSkills2));
