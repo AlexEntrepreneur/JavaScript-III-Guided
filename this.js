@@ -24,7 +24,14 @@ function log(){
 log();
 
 //====== Implicit Binding ======//
-
+const hobbit = {
+    name: "Samwise",
+    age: 32,
+    food: "taters",
+    cook: function() {
+        return `${this.name} loves to cook ${this.food}`;
+    }
+}
 
 
 
