@@ -60,9 +60,23 @@ console.log(tree.info());
 
 
 
-
-
 //====== Explicit Binding ======//
+const person = {
+    name: "Jill"
+}
+
+const jedi = {
+    name: "Luke"
+}
+
+function introduce() {
+    return `Hello! My name is ${this.name}`;
+}
+
 // .call() requires arguments to be passed individually
+console.log(introduce.call(person));
+
 // .apply() Accepts sing array to pass arguments
+console.log(introduce.apply(jedi));
+
 // .bind() Stores this keyword for function to be called later
