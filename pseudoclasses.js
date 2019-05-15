@@ -28,10 +28,28 @@ const fred = new Parent({
     phrase: "Yabba dabba do!"
 });
 
-const wilma = new Parent({
+// const wilma = new Parent({
+
+// });
+
+// Shola's Example
+const velma = new Parent({
+    age: 25,
+    name: 'Velma',
+    location: 'Bedrock',
+    phrase: 'Jinkies I just got a clue'
 
 });
 
+// Jayne's Example
+const batman = new Parent ({
+    age: 47,
+    name: "Bruce",
+    location: "Gotham City",
+    phrase: "I AM BATMAN"
+});
+
+console.log(velma);
 
 
 
