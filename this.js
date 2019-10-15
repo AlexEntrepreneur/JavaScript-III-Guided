@@ -15,5 +15,5 @@
 
 //====== Explicit Binding ======//
 // .call() requires arguments to be passed individually
-// .apply() Accepts sing array to pass arguments
-// .bind(): Stores this keyword for function to be called later
+// .apply() requires arguments to be passed as an array
+// .bind() stores the value of this for later (when the function is called)
