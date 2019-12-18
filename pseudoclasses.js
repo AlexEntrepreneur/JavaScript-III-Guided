@@ -53,6 +53,28 @@ const wilma = new Parent({
 console.log(fred, wilma);
 
 
+// Hester
+function Fruit(attrs) {
+  this.name = attrs.name;
+  this.isRipe = attrs.isRipe;
+  this.calories = attrs.calories;
+}
+
+Fruit.prototype.calculateCals = function() {
+  console.log(`Calories in ${this.name} are ${this.calories * 100}`);
+};
+
+const mango = new Fruit({
+  name: "Mango",
+  isRipe: true,
+  calories: 200
+});
+
+
+mango.calculateCals();
+console.log(mango);
+
+
 //====== Pseudoclassical Inheritance ======//
 // Step 1. Create Constructor
 // Step 2. Add Explicit Binding
