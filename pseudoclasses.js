@@ -77,6 +77,28 @@ console.log(mango);
 
 //====== Pseudoclassical Inheritance ======//
 // Step 1. Create Constructor
-// Step 2. Add Explicit Binding
+function Child(childAttributes) {
+  // Step 2. Add Explicit Binding
+  Parent.call(this, childAttributes);
+  this.toy = childAttributes.toy;
+}
+
 // Step 3. Connect Child to Parent
+Child.prototype = Object.create(Parent.prototype);
+
 // Step 4. Attach Child Methods!
+Child.prototype.play = function() {
+  return `${this.name} plays with ${this.toy}`;
+}
+
+const pebbles = new Child({
+  age: 2,
+  name: "Pebbles",
+  location: "Bedrock",
+  phrase: "Yabba dabba doozie!",
+  toy: "Rock Doll"
+});
+
+console.log(fred.speak());
+console.log(wilma.speak());
+console.log(pebbles.play());
